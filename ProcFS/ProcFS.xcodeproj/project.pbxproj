@@ -1,0 +1,999 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B61ABE2D1C0E74FB00A960F5 /* mount_procfs.c in Sources */ = {isa = PBXBuildFile; fileRef = B61ABE2C1C0E74FB00A960F5 /* mount_procfs.c */; };
+		B61ABE461C0FBB5400A960F5 /* libutil.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B61ABE451C0FBB5400A960F5 /* libutil.tbd */; };
+		B66757D91C3601D10071E592 /* procfs.h in Headers */ = {isa = PBXBuildFile; fileRef = B61ABE3E1C0E75A600A960F5 /* procfs.h */; };
+		B66757DB1C3601D10071E592 /* procfs_vfsops.c in Sources */ = {isa = PBXBuildFile; fileRef = B61ABE491C11160600A960F5 /* procfs_vfsops.c */; };
+		B66757DC1C3601D10071E592 /* procfs_vnops.c in Sources */ = {isa = PBXBuildFile; fileRef = B61ABE4B1C11204100A960F5 /* procfs_vnops.c */; };
+		B66757DD1C3601D10071E592 /* procfsnode.c in Sources */ = {isa = PBXBuildFile; fileRef = B62892AB1C166FE20019412F /* procfsnode.c */; };
+		B66757DE1C3601D10071E592 /* procfsnode.h in Headers */ = {isa = PBXBuildFile; fileRef = B62892AC1C166FE20019412F /* procfsnode.h */; };
+		B66757DF1C3601D10071E592 /* procfsstructure.h in Headers */ = {isa = PBXBuildFile; fileRef = B61F02EB1C2F568D00D3BFFE /* procfsstructure.h */; };
+		B66757E01C3601D10071E592 /* procfsstructure.c in Sources */ = {isa = PBXBuildFile; fileRef = B61F02EC1C2F59BA00D3BFFE /* procfsstructure.c */; };
+		B66757E11C3601D10071E592 /* procfs_subr.c in Sources */ = {isa = PBXBuildFile; fileRef = B66757BA1C3381ED0071E592 /* procfs_subr.c */; };
+		B66757E21C3601D10071E592 /* procfs_subr.h in Headers */ = {isa = PBXBuildFile; fileRef = B66757BB1C3381ED0071E592 /* procfs_subr.h */; };
+		B667581B1C42D6D80071E592 /* procfs_data.c in Sources */ = {isa = PBXBuildFile; fileRef = B66758191C42D6D80071E592 /* procfs_data.c */; };
+		B667581C1C42D6D80071E592 /* procfs_data.h in Headers */ = {isa = PBXBuildFile; fileRef = B667581A1C42D6D80071E592 /* procfs_data.h */; };
+		B667584F1C49C8570071E592 /* mntopts.h in Headers */ = {isa = PBXBuildFile; fileRef = B61ABE471C0FBF8E00A960F5 /* mntopts.h */; };
+		B667585E1C49E5080071E592 /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B667585A1C49E4F30071E592 /* libgtest_main.a */; };
+		B667585F1C49E50B0071E592 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B667585B1C49E4F30071E592 /* libgtest.a */; };
+		B66758601C49EDED0071E592 /* ProcFS_TestFixture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B667584B1C49C7500071E592 /* ProcFS_TestFixture.cpp */; };
+		B66758621C49F1360071E592 /* ProcFS_RootDirTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B66758611C49F1360071E592 /* ProcFS_RootDirTests.cpp */; };
+		B66758641C4AC3F80071E592 /* ProcFS_FileSystemTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B66758631C4AC3F80071E592 /* ProcFS_FileSystemTests.cpp */; };
+		B66758881C4AF2690071E592 /* ProcFS_TestHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B66758861C4AF2690071E592 /* ProcFS_TestHelpers.cpp */; };
+		B667588A1C4B19890071E592 /* ProcFS_ProcessDirTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B66758891C4B19890071E592 /* ProcFS_ProcessDirTests.cpp */; };
+		B667588C1C4B3A060071E592 /* ProcFS_ProcessByNameDirTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B667588B1C4B3A060071E592 /* ProcFS_ProcessByNameDirTests.cpp */; };
+		B667588F1C4C5EA20071E592 /* ProcFS_ThreadsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B667588E1C4C5EA20071E592 /* ProcFS_ThreadsTests.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B61ABE271C0E74FB00A960F5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B66758221C4887EB0071E592 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B61ABE291C0E74FB00A960F5 /* mount_procfs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mount_procfs; sourceTree = BUILT_PRODUCTS_DIR; };
+		B61ABE2C1C0E74FB00A960F5 /* mount_procfs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mount_procfs.c; sourceTree = "<group>"; };
+		B61ABE3E1C0E75A600A960F5 /* procfs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = procfs.h; sourceTree = "<group>"; };
+		B61ABE451C0FBB5400A960F5 /* libutil.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libutil.tbd; path = usr/lib/libutil.tbd; sourceTree = SDKROOT; };
+		B61ABE471C0FBF8E00A960F5 /* mntopts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mntopts.h; sourceTree = "<group>"; };
+		B61ABE491C11160600A960F5 /* procfs_vfsops.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = procfs_vfsops.c; sourceTree = "<group>"; };
+		B61ABE4B1C11204100A960F5 /* procfs_vnops.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = procfs_vnops.c; sourceTree = "<group>"; };
+		B61F02EB1C2F568D00D3BFFE /* procfsstructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = procfsstructure.h; sourceTree = "<group>"; };
+		B61F02EC1C2F59BA00D3BFFE /* procfsstructure.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = procfsstructure.c; sourceTree = "<group>"; };
+		B62892AB1C166FE20019412F /* procfsnode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = procfsnode.c; sourceTree = "<group>"; };
+		B62892AC1C166FE20019412F /* procfsnode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = procfsnode.h; sourceTree = "<group>"; };
+		B66757BA1C3381ED0071E592 /* procfs_subr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = procfs_subr.c; sourceTree = "<group>"; };
+		B66757BB1C3381ED0071E592 /* procfs_subr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = procfs_subr.h; sourceTree = "<group>"; };
+		B66757D51C35FB170071E592 /* libprocfs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libprocfs.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66758191C42D6D80071E592 /* procfs_data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = procfs_data.c; sourceTree = "<group>"; };
+		B667581A1C42D6D80071E592 /* procfs_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = procfs_data.h; sourceTree = "<group>"; };
+		B66758241C4887EB0071E592 /* Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tests; sourceTree = BUILT_PRODUCTS_DIR; };
+		B667584B1C49C7500071E592 /* ProcFS_TestFixture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProcFS_TestFixture.cpp; sourceTree = "<group>"; };
+		B667584C1C49C7500071E592 /* ProcFS_TestFixture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ProcFS_TestFixture.hpp; sourceTree = "<group>"; };
+		B667585A1C49E4F30071E592 /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgtest_main.a; sourceTree = "<group>"; };
+		B667585B1C49E4F30071E592 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgtest.a; sourceTree = "<group>"; };
+		B66758611C49F1360071E592 /* ProcFS_RootDirTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProcFS_RootDirTests.cpp; sourceTree = "<group>"; };
+		B66758631C4AC3F80071E592 /* ProcFS_FileSystemTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProcFS_FileSystemTests.cpp; sourceTree = "<group>"; };
+		B66758861C4AF2690071E592 /* ProcFS_TestHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProcFS_TestHelpers.cpp; sourceTree = "<group>"; };
+		B66758871C4AF2690071E592 /* ProcFS_TestHelpers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ProcFS_TestHelpers.hpp; sourceTree = "<group>"; };
+		B66758891C4B19890071E592 /* ProcFS_ProcessDirTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProcFS_ProcessDirTests.cpp; sourceTree = "<group>"; };
+		B667588B1C4B3A060071E592 /* ProcFS_ProcessByNameDirTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProcFS_ProcessByNameDirTests.cpp; sourceTree = "<group>"; };
+		B667588E1C4C5EA20071E592 /* ProcFS_ThreadsTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProcFS_ThreadsTests.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B61ABE261C0E74FB00A960F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B61ABE461C0FBB5400A960F5 /* libutil.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66757D21C35FB170071E592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66758211C4887EB0071E592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B667585E1C49E5080071E592 /* libgtest_main.a in Frameworks */,
+				B667585F1C49E50B0071E592 /* libgtest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B61ABE1E1C0E74C600A960F5 = {
+			isa = PBXGroup;
+			children = (
+				B667585A1C49E4F30071E592 /* libgtest_main.a */,
+				B667585B1C49E4F30071E592 /* libgtest.a */,
+				B61ABE2B1C0E74FB00A960F5 /* mount_procfs */,
+				B61ABE371C0E755200A960F5 /* procfs */,
+				B66758251C4887EB0071E592 /* Tests */,
+				B61ABE2A1C0E74FB00A960F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B61ABE2A1C0E74FB00A960F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B61ABE291C0E74FB00A960F5 /* mount_procfs */,
+				B66757D51C35FB170071E592 /* libprocfs.a */,
+				B66758241C4887EB0071E592 /* Tests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B61ABE2B1C0E74FB00A960F5 /* mount_procfs */ = {
+			isa = PBXGroup;
+			children = (
+				B61ABE2C1C0E74FB00A960F5 /* mount_procfs.c */,
+				B61ABE471C0FBF8E00A960F5 /* mntopts.h */,
+				B61ABE451C0FBB5400A960F5 /* libutil.tbd */,
+			);
+			path = mount_procfs;
+			sourceTree = "<group>";
+		};
+		B61ABE371C0E755200A960F5 /* procfs */ = {
+			isa = PBXGroup;
+			children = (
+				B61ABE3E1C0E75A600A960F5 /* procfs.h */,
+				B61ABE491C11160600A960F5 /* procfs_vfsops.c */,
+				B61ABE4B1C11204100A960F5 /* procfs_vnops.c */,
+				B62892AB1C166FE20019412F /* procfsnode.c */,
+				B62892AC1C166FE20019412F /* procfsnode.h */,
+				B61F02EB1C2F568D00D3BFFE /* procfsstructure.h */,
+				B61F02EC1C2F59BA00D3BFFE /* procfsstructure.c */,
+				B66758191C42D6D80071E592 /* procfs_data.c */,
+				B667581A1C42D6D80071E592 /* procfs_data.h */,
+				B66757BA1C3381ED0071E592 /* procfs_subr.c */,
+				B66757BB1C3381ED0071E592 /* procfs_subr.h */,
+			);
+			path = procfs;
+			sourceTree = "<group>";
+		};
+		B66758251C4887EB0071E592 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B66758631C4AC3F80071E592 /* ProcFS_FileSystemTests.cpp */,
+				B66758611C49F1360071E592 /* ProcFS_RootDirTests.cpp */,
+				B66758891C4B19890071E592 /* ProcFS_ProcessDirTests.cpp */,
+				B667588B1C4B3A060071E592 /* ProcFS_ProcessByNameDirTests.cpp */,
+				B667588E1C4C5EA20071E592 /* ProcFS_ThreadsTests.cpp */,
+				B667588D1C4C36D10071E592 /* Test Helpers */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B667588D1C4C36D10071E592 /* Test Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B667584B1C49C7500071E592 /* ProcFS_TestFixture.cpp */,
+				B667584C1C49C7500071E592 /* ProcFS_TestFixture.hpp */,
+				B66758861C4AF2690071E592 /* ProcFS_TestHelpers.cpp */,
+				B66758871C4AF2690071E592 /* ProcFS_TestHelpers.hpp */,
+			);
+			name = "Test Helpers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B66757D31C35FB170071E592 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66757DF1C3601D10071E592 /* procfsstructure.h in Headers */,
+				B66757D91C3601D10071E592 /* procfs.h in Headers */,
+				B667584F1C49C8570071E592 /* mntopts.h in Headers */,
+				B66757DE1C3601D10071E592 /* procfsnode.h in Headers */,
+				B667581C1C42D6D80071E592 /* procfs_data.h in Headers */,
+				B66757E21C3601D10071E592 /* procfs_subr.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B61ABE281C0E74FB00A960F5 /* mount_procfs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B61ABE2E1C0E74FB00A960F5 /* Build configuration list for PBXNativeTarget "mount_procfs" */;
+			buildPhases = (
+				B61ABE251C0E74FB00A960F5 /* Sources */,
+				B61ABE261C0E74FB00A960F5 /* Frameworks */,
+				B61ABE271C0E74FB00A960F5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mount_procfs;
+			productName = mount_procfs;
+			productReference = B61ABE291C0E74FB00A960F5 /* mount_procfs */;
+			productType = "com.apple.product-type.tool";
+		};
+		B66757D41C35FB170071E592 /* procfs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B66757D61C35FB170071E592 /* Build configuration list for PBXNativeTarget "procfs" */;
+			buildPhases = (
+				B66757D11C35FB170071E592 /* Sources */,
+				B66757D21C35FB170071E592 /* Frameworks */,
+				B66757D31C35FB170071E592 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = procfs;
+			productName = "procfs-lib";
+			productReference = B66757D51C35FB170071E592 /* libprocfs.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B66758231C4887EB0071E592 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B66758281C4887EB0071E592 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				B66758201C4887EB0071E592 /* Sources */,
+				B66758211C4887EB0071E592 /* Frameworks */,
+				B66758221C4887EB0071E592 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = B66758241C4887EB0071E592 /* Tests */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B61ABE1F1C0E74C600A960F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				TargetAttributes = {
+					B61ABE281C0E74FB00A960F5 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					B66757D41C35FB170071E592 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					B66758231C4887EB0071E592 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = B61ABE221C0E74C600A960F5 /* Build configuration list for PBXProject "ProcFS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B61ABE1E1C0E74C600A960F5;
+			productRefGroup = B61ABE2A1C0E74FB00A960F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B61ABE281C0E74FB00A960F5 /* mount_procfs */,
+				B66757D41C35FB170071E592 /* procfs */,
+				B66758231C4887EB0071E592 /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B61ABE251C0E74FB00A960F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B61ABE2D1C0E74FB00A960F5 /* mount_procfs.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66757D11C35FB170071E592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66757DD1C3601D10071E592 /* procfsnode.c in Sources */,
+				B66757E11C3601D10071E592 /* procfs_subr.c in Sources */,
+				B667581B1C42D6D80071E592 /* procfs_data.c in Sources */,
+				B66757E01C3601D10071E592 /* procfsstructure.c in Sources */,
+				B66757DB1C3601D10071E592 /* procfs_vfsops.c in Sources */,
+				B66757DC1C3601D10071E592 /* procfs_vnops.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66758201C4887EB0071E592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66758621C49F1360071E592 /* ProcFS_RootDirTests.cpp in Sources */,
+				B667588A1C4B19890071E592 /* ProcFS_ProcessDirTests.cpp in Sources */,
+				B667588C1C4B3A060071E592 /* ProcFS_ProcessByNameDirTests.cpp in Sources */,
+				B66758641C4AC3F80071E592 /* ProcFS_FileSystemTests.cpp in Sources */,
+				B66758881C4AF2690071E592 /* ProcFS_TestHelpers.cpp in Sources */,
+				B667588F1C4C5EA20071E592 /* ProcFS_ThreadsTests.cpp in Sources */,
+				B66758601C49EDED0071E592 /* ProcFS_TestFixture.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B61ABE231C0E74C600A960F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		B61ABE241C0E74C600A960F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		B61ABE2F1C0E74FB00A960F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B61ABE301C0E74FB00A960F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B66757D71C35FB170071E592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/test",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_USE_STANDARD_INCLUDE_SEARCHING = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(XNU_SOURCE_CODE_DIR)/EXTERNAL_HEADERS",
+					"$(XNU_SOURCE_CODE_DIR)/BUILD/obj/EXPORT_HDRS/libkern",
+					"$(XNU_SOURCE_CODE_DIR)/BUILD/obj/EXPORT_HDRS/osfmk",
+					"$(XNU_SOURCE_CODE_DIR)/BUILD/obj/EXPORT_HDRS/bsd",
+					"$(XNU_SOURCE_CODE_DIR)/bsd",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_CFLAGS = (
+					"-DPROCFS",
+					"-DLP64_DEBUG=0",
+					"-DBSD_KERNEL_PRIVATE",
+					"-DBSD_BUILD",
+					"-DMACH_KERNEL",
+					"-DKERNEL_BUILD",
+					"-D_KERNEL_BUILD",
+					"-DDRIVER_PRIVATE",
+					"-DCONFIG_MACH_APPROXIMATE_TIME",
+					"-DHYPERVISOR",
+					"-DCONFIG_MTRR",
+					"-DCONFIG_VMX",
+					"-DCONFIG_MCA",
+					"-DPAL_I386",
+					"-DCONFIG_REQUIRES_U32_MUNGING",
+					"-DVIDEO_CONSOLE",
+					"-DSERIAL_CONSOLE",
+					"-DCONFIG_CSR",
+					"-DCONFIG_SYSDIAGNOSE",
+					"-DCONFIG_COALITIONS",
+					"-DCONFIG_BANK",
+					"-DCONFIG_ATM",
+					"-DCONFIG_KDP_INTERACTIVE_DEBUGGING",
+					"-DCONFIG_SERIAL_KDP",
+					"-DMACH_KDP",
+					"-DCONFIG_GZALLOC",
+					"-DCONFIG_SCHED_SFI",
+					"-DCONFIG_SCHED_TIMESHARE_CORE",
+					"-DCONFIG_SCHED_MULTIQ",
+					"-DCONFIG_SCHED_GRRR_CORE",
+					"-DCONFIG_SCHED_GRRR",
+					"-DCONFIG_SCHED_PROTO",
+					"-DCONFIG_SCHED_TRADITIONAL",
+					"-DCONFIG_ZLEAK_TRACE_MAP_NUM=\"8192\"",
+					"-DCONFIG_ZLEAK_ALLOCATION_MAP_NUM=\"16384\"",
+					"-DCONFIG_ZONE_MAP_MIN=\"12582912\"",
+					"-DCONFIG_TASK_MAX=\"1024\"",
+					"-DCONFIG_THREAD_MAX=\"2560\"",
+					"-DIOKIT",
+					"-DMACH_BSD",
+					"-DDEBUG",
+					"-DKPC",
+					"-DKPERF",
+					"-DCONFIG_TASK_ZONE_INFO",
+					"-DCONFIG_ZLEAKS",
+					"-DZONE_DEBUG",
+					"-DMACH_MP_DEBUG",
+					"-DMACH_RT",
+					"-DCONFIG_KEXT_BASEMENT",
+					"-DCONFIG_KEC_FIPS",
+					"-DCONFIG_KXLD",
+					"-DLIBKERNCPP",
+					"-DCONFIG_MAX_THREADS=\"64\"",
+					"-DCONFIG_SLEEP",
+					"-DIOTRACKING",
+					"-DIOKITSTATS",
+					"-DIOKITCPP",
+					"-DHIBERNATION",
+					"-DCONFIG_PROC_UUID_POLICY",
+					"-DCONFIG_TELEMETRY",
+					"-DCONFIG_IOSCHED",
+					"-DVM_PRESSURE_EVENTS",
+					"-DCONFIG_PHANTOM_CACHE",
+					"-DCONFIG_WAITQ_DEBUG",
+					"-DCONFIG_WAITQ_STATS",
+					"-DCONFIG_MEMORYSTATUS",
+					"-DCONFIG_CODE_DECRYPTION",
+					"-DCONFIG_DYNAMIC_CODE_SIGNING",
+					"-DCONFIG_FINE_LOCK_GROUPS",
+					"-DCONFIG_IPC_TABLE_ENTRIES_STEPS=\"256\"",
+					"-DCONFIG_MSG_BSIZE=\"16384\"",
+					"-DCONFIG_MFCTBLSIZ=\"256\"",
+					"-DCONFIG_MAXVIFS=\"32\"",
+					"-DCONFIG_AIO_THREAD_COUNT=\"4\"",
+					"-DCONFIG_AIO_PROCESS_MAX=\"16\"",
+					"-DCONFIG_AIO_MAX=\"90\"",
+					"-DCONFIG_ICMP_BANDLIM=\"250\"",
+					"-DCONFIG_TCBHASHSIZE=\"4096\"",
+					"-DCONFIG_NMBCLUSTERS=\"((1024 * 512) / MCLBYTES)\"",
+					"-DCONFIG_MIN_NIOBUF=\"128\"",
+					"-DCONFIG_MIN_NBUF=\"256\"",
+					"-DCONFIG_MAX_CLUSTERS=\"8\"",
+					"-DCONFIG_VFS_NAMES=\"4096\"",
+					"-DCONFIG_NC_HASH=\"4096\"",
+					"-DCONFIG_VNODE_FREE_MIN=\"300\"",
+					"-DCONFIG_VNODES=\"263168\"",
+					"-DCONFIG_KN_HASHSIZE=\"64\"",
+					"-DENCRYPTED_SWAP",
+					"-DCRYPTO_SHA2",
+					"-DIPV6FIREWALL_DEFAULT_TO_ACCEPT",
+					"-DIPSEC_ESP",
+					"-DCONFIG_SEARCHFS",
+					"-DIPSEC",
+					"-DCONFIG_EXT_RESOLVER",
+					"-DCONFIG_TRIGGERS",
+					"-DCONFIG_IMGSRC_ACCESS",
+					"-DCONFIG_VOLFS",
+					"-DCONFIG_APPLEDOUBLE",
+					"-DNAMEDSTREAMS",
+					"-DCONFIG_DEV_KMEM",
+					"-DCONFIG_HFS_DIRLINK",
+					"-DCONFIG_HFS_TRIM",
+					"-DCONFIG_HFS_STD",
+					"-DCONFIG_WORKQUEUE",
+					"-DCONFIG_MBUF_JUMBO",
+					"-DOLD_SEMWAIT_SIGNAL",
+					"-DPACKET_MANGLER",
+					"-DCONTENT_FILTER",
+					"-DNECP",
+					"-DFLOW_DIVERT",
+					"-DPSYNCH",
+					"-DIFNET_INPUT_SANITY_CHK",
+					"-DICMP_BANDLIM",
+					"-DTCP_DROP_SYNFIN",
+					"-DMULTICAST",
+					"-DTRAFFIC_MGT",
+					"-DIPFIREWALL_DEFAULT_TO_ACCEPT",
+					"-DIPFIREWALL_FORWARD",
+					"-DLP64",
+					"-DPAGE_SIZE_FIXED",
+					"-D__X86_64__",
+					"-Dx86_64",
+					"-DAPPLE",
+					"-DPLATFORM_MacOSX",
+					"-DKERNEL_BASE_OFFSET=0x100000",
+					"-DIPCOMP_ZLIB",
+					"-DAH_ALL_CRYPTO",
+					"-DNO_DIRECT_RPC",
+					"-DMACH",
+					"-Dvolatile=__volatile",
+					"-D__MACHO__=1",
+					"-DPRIVATE",
+					"-DXNU_KERNEL_PRIVATE",
+					"-DKERNEL_PRIVATE",
+					"-DKERNEL",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wno-cast-align",
+					"-Wunreachable-code",
+					"-Wextra-tokens",
+					"-Wredundant-decls",
+					"-Wnested-externs",
+					"-Winline",
+					"-Wchar-subscripts",
+					"-Wcast-align",
+					"-Wshadow",
+					"-Wswitch",
+					"-Wwrite-strings",
+					"-Wcast-qual",
+					"-Wreturn-type",
+					"-Wpointer-arith",
+					"-Wmissing-prototypes",
+					"-Wstrict-prototypes",
+					"-Wextra",
+					"-Wno-format-y2k",
+					"-Werror",
+					"-Wall",
+				);
+				XNU_SOURCE_CODE_DIR = "$HOME/DARWINBUILD/xnu-3248.20.55";
+			};
+			name = Debug;
+		};
+		B66757D81C35FB170071E592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/test",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_USE_STANDARD_INCLUDE_SEARCHING = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(XNU_SOURCE_CODE_DIR)/EXTERNAL_HEADERS",
+					"$(XNU_SOURCE_CODE_DIR)/BUILD/obj/EXPORT_HDRS/libkern",
+					"$(XNU_SOURCE_CODE_DIR)/BUILD/obj/EXPORT_HDRS/osfmk",
+					"$(XNU_SOURCE_CODE_DIR)/BUILD/obj/EXPORT_HDRS/bsd",
+					"$(XNU_SOURCE_CODE_DIR)/bsd",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"-DPROCFS",
+					"-DLP64_DEBUG=0",
+					"-DBSD_KERNEL_PRIVATE",
+					"-DBSD_BUILD",
+					"-DMACH_KERNEL",
+					"-DKERNEL_BUILD",
+					"-D_KERNEL_BUILD",
+					"-DDRIVER_PRIVATE",
+					"-DCONFIG_MACH_APPROXIMATE_TIME",
+					"-DHYPERVISOR",
+					"-DCONFIG_MTRR",
+					"-DCONFIG_VMX",
+					"-DCONFIG_MCA",
+					"-DPAL_I386",
+					"-DCONFIG_REQUIRES_U32_MUNGING",
+					"-DVIDEO_CONSOLE",
+					"-DSERIAL_CONSOLE",
+					"-DCONFIG_CSR",
+					"-DCONFIG_SYSDIAGNOSE",
+					"-DCONFIG_COALITIONS",
+					"-DCONFIG_BANK",
+					"-DCONFIG_ATM",
+					"-DCONFIG_KDP_INTERACTIVE_DEBUGGING",
+					"-DCONFIG_SERIAL_KDP",
+					"-DMACH_KDP",
+					"-DCONFIG_GZALLOC",
+					"-DCONFIG_SCHED_SFI",
+					"-DCONFIG_SCHED_TIMESHARE_CORE",
+					"-DCONFIG_SCHED_MULTIQ",
+					"-DCONFIG_SCHED_GRRR_CORE",
+					"-DCONFIG_SCHED_GRRR",
+					"-DCONFIG_SCHED_PROTO",
+					"-DCONFIG_SCHED_TRADITIONAL",
+					"-DCONFIG_ZLEAK_TRACE_MAP_NUM=\"8192\"",
+					"-DCONFIG_ZLEAK_ALLOCATION_MAP_NUM=\"16384\"",
+					"-DCONFIG_ZONE_MAP_MIN=\"12582912\"",
+					"-DCONFIG_TASK_MAX=\"1024\"",
+					"-DCONFIG_THREAD_MAX=\"2560\"",
+					"-DIOKIT",
+					"-DMACH_BSD",
+					"-DDEBUG",
+					"-DKPC",
+					"-DKPERF",
+					"-DCONFIG_TASK_ZONE_INFO",
+					"-DCONFIG_ZLEAKS",
+					"-DZONE_DEBUG",
+					"-DMACH_MP_DEBUG",
+					"-DMACH_RT",
+					"-DCONFIG_KEXT_BASEMENT",
+					"-DCONFIG_KEC_FIPS",
+					"-DCONFIG_KXLD",
+					"-DLIBKERNCPP",
+					"-DCONFIG_MAX_THREADS=\"64\"",
+					"-DCONFIG_SLEEP",
+					"-DIOTRACKING",
+					"-DIOKITSTATS",
+					"-DIOKITCPP",
+					"-DHIBERNATION",
+					"-DCONFIG_PROC_UUID_POLICY",
+					"-DCONFIG_TELEMETRY",
+					"-DCONFIG_IOSCHED",
+					"-DVM_PRESSURE_EVENTS",
+					"-DCONFIG_PHANTOM_CACHE",
+					"-DCONFIG_WAITQ_DEBUG",
+					"-DCONFIG_WAITQ_STATS",
+					"-DCONFIG_MEMORYSTATUS",
+					"-DCONFIG_CODE_DECRYPTION",
+					"-DCONFIG_DYNAMIC_CODE_SIGNING",
+					"-DCONFIG_FINE_LOCK_GROUPS",
+					"-DCONFIG_IPC_TABLE_ENTRIES_STEPS=\"256\"",
+					"-DCONFIG_MSG_BSIZE=\"16384\"",
+					"-DCONFIG_MFCTBLSIZ=\"256\"",
+					"-DCONFIG_MAXVIFS=\"32\"",
+					"-DCONFIG_AIO_THREAD_COUNT=\"4\"",
+					"-DCONFIG_AIO_PROCESS_MAX=\"16\"",
+					"-DCONFIG_AIO_MAX=\"90\"",
+					"-DCONFIG_ICMP_BANDLIM=\"250\"",
+					"-DCONFIG_TCBHASHSIZE=\"4096\"",
+					"-DCONFIG_NMBCLUSTERS=\"((1024 * 512) / MCLBYTES)\"",
+					"-DCONFIG_MIN_NIOBUF=\"128\"",
+					"-DCONFIG_MIN_NBUF=\"256\"",
+					"-DCONFIG_MAX_CLUSTERS=\"8\"",
+					"-DCONFIG_VFS_NAMES=\"4096\"",
+					"-DCONFIG_NC_HASH=\"4096\"",
+					"-DCONFIG_VNODE_FREE_MIN=\"300\"",
+					"-DCONFIG_VNODES=\"263168\"",
+					"-DCONFIG_KN_HASHSIZE=\"64\"",
+					"-DENCRYPTED_SWAP",
+					"-DCRYPTO_SHA2",
+					"-DIPV6FIREWALL_DEFAULT_TO_ACCEPT",
+					"-DIPSEC_ESP",
+					"-DCONFIG_SEARCHFS",
+					"-DIPSEC",
+					"-DCONFIG_EXT_RESOLVER",
+					"-DCONFIG_TRIGGERS",
+					"-DCONFIG_IMGSRC_ACCESS",
+					"-DCONFIG_VOLFS",
+					"-DCONFIG_APPLEDOUBLE",
+					"-DNAMEDSTREAMS",
+					"-DCONFIG_DEV_KMEM",
+					"-DCONFIG_HFS_DIRLINK",
+					"-DCONFIG_HFS_TRIM",
+					"-DCONFIG_HFS_STD",
+					"-DCONFIG_WORKQUEUE",
+					"-DCONFIG_MBUF_JUMBO",
+					"-DOLD_SEMWAIT_SIGNAL",
+					"-DPACKET_MANGLER",
+					"-DCONTENT_FILTER",
+					"-DNECP",
+					"-DFLOW_DIVERT",
+					"-DPSYNCH",
+					"-DIFNET_INPUT_SANITY_CHK",
+					"-DICMP_BANDLIM",
+					"-DTCP_DROP_SYNFIN",
+					"-DMULTICAST",
+					"-DTRAFFIC_MGT",
+					"-DIPFIREWALL_DEFAULT_TO_ACCEPT",
+					"-DIPFIREWALL_FORWARD",
+					"-DLP64",
+					"-DPAGE_SIZE_FIXED",
+					"-D__X86_64__",
+					"-Dx86_64",
+					"-DAPPLE",
+					"-DPLATFORM_MacOSX",
+					"-DKERNEL_BASE_OFFSET=0x100000",
+					"-DIPCOMP_ZLIB",
+					"-DAH_ALL_CRYPTO",
+					"-DNO_DIRECT_RPC",
+					"-DMACH",
+					"-Dvolatile=__volatile",
+					"-D__MACHO__=1",
+					"-DPRIVATE",
+					"-DXNU_KERNEL_PRIVATE",
+					"-DKERNEL_PRIVATE",
+					"-DKERNEL",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wno-cast-align",
+					"-Wunreachable-code",
+					"-Wextra-tokens",
+					"-Wredundant-decls",
+					"-Wnested-externs",
+					"-Winline",
+					"-Wchar-subscripts",
+					"-Wcast-align",
+					"-Wshadow",
+					"-Wswitch",
+					"-Wwrite-strings",
+					"-Wcast-qual",
+					"-Wreturn-type",
+					"-Wpointer-arith",
+					"-Wmissing-prototypes",
+					"-Wstrict-prototypes",
+					"-Wextra",
+					"-Wno-format-y2k",
+					"-Werror",
+					"-Wall",
+				);
+				XNU_SOURCE_CODE_DIR = "$HOME/DARWINBUILD/xnu-3248.20.55";
+			};
+			name = Release;
+		};
+		B66758291C4887EB0071E592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/gtest",
+					"$(PROJECT_DIR)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/gtest/include";
+			};
+			name = Debug;
+		};
+		B667582A1C4887EB0071E592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/gtest",
+					"$(PROJECT_DIR)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/gtest/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B61ABE221C0E74C600A960F5 /* Build configuration list for PBXProject "ProcFS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B61ABE231C0E74C600A960F5 /* Debug */,
+				B61ABE241C0E74C600A960F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B61ABE2E1C0E74FB00A960F5 /* Build configuration list for PBXNativeTarget "mount_procfs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B61ABE2F1C0E74FB00A960F5 /* Debug */,
+				B61ABE301C0E74FB00A960F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B66757D61C35FB170071E592 /* Build configuration list for PBXNativeTarget "procfs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66757D71C35FB170071E592 /* Debug */,
+				B66757D81C35FB170071E592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B66758281C4887EB0071E592 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66758291C4887EB0071E592 /* Debug */,
+				B667582A1C4887EB0071E592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B61ABE1F1C0E74C600A960F5 /* Project object */;
+}
