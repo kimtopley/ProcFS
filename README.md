@@ -14,13 +14,13 @@ Each directory in the left column represents one process on the system. By defau
 
 | File    | Summary                          | Structure                     |
 |---------|----------------------------------|-------------------------------|
-|pid      | Process id                       | pid_t                         |
-|ppid     | Parent process id                | pid_t                         |
-|pgid     | Process group id                 | pid_t                         |
-|sid      | Session id                       | pid_t                         |
-|tty      | Controlling tty                  | string, such as `/dev/tty000` |
-|info     | Basic process info               | struct proc_bsdinfo           |
-|taskinfo | Info for the process’s Mach task | struct proc_taskinfo          |
+|`pid`    | Process id                       | `pid_t`                         |
+|`ppid`     | Parent process id                | `pid_t`                         |
+|`pgid`     | Process group id                 | `pid_t`                         |
+|`sid`      | Session id                       | `pid_t`                         |
+|`tty`      | Controlling tty                  | string, such as `/dev/tty000` |
+|`info`     | Basic process info               | `struct proc_bsdinfo`           |
+|`taskinfo` | Info for the process’s Mach task | `struct proc_taskinfo`          |
 
 The `fd` directory contains one entry for each file that the process has open. Each entry is a directory that’s numbered for the corresponding file descriptor. Most processes will have at least entries 0, 1 and 2 for standard input, output and error respectively. Within each subdirectory you’ll find two files called `details` and `socket`. The `details` file contains a `vnode_fdinfowithpath` structure, which contains information about the file including its path name if it is a file system file. If the file is a socket endpoint, you can read a `socket_fdinfo` structure from the `socket` file.
 
@@ -31,7 +31,11 @@ The `threads` directory contains a subdirectory for each of the process’ threa
 
 ## Why isn’t procfs a Kernel Extension?
 
-For the first few weeks of development, *procfs* was implemented as a kernel extension. Developing s kernel extensions is much easier than adding code to the kernel itself because an extension can be installed, loaded for testing, unloaded and then replaced without rebooting—provided, of course, that the extension doesn’t cause a kernel panic or a lock up. 
-
+For the first few weeks of development, *procfs* was implemented as a kernel extension. Developing a kernel extensions is much easier than adding code to the kernel itself because an extension can be installed, loaded for testing, unloaded and then replaced without rebooting—provided, of course, that the extension doesn’t cause a kernel panic or a lock up. I used this mode of operation to get the file system to the point where it would mount and do basic things, such as resolve path names and read directory data. The problem with being in a kernel extension is that you only have access to a small and tightly controlled API. For most of what *procfs* does, this API just isn't sufficient. For example, kernel extensions can't examine a process's `proc` structure or discover what threads a process has. For that and many other things that *procfs* needs access to, it has to be part of the kernel itself.
 
 ## Testing the procfs Implementation
+
+*procfs* has a suite of tests implemented in GoogleTest. To run them, select the `Tests` target in Xcode and build it, then copy the *Tests* binary to the system on which you are running *procfs*. Make sure the file system is mounted on `/proc` and then run the tests by invoking the executable:
+````
+./Tests
+````
